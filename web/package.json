@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode=production",
     "watch": "webpack --mode=development --watch",
-    "start:dev": "webpack-dev-server --mode=development",
+    "start:dev": "webpack-dev-server --open --mode=development",
     "lint": "eslint . --ext .ts,.tsx,.js",
     "lint-fix": "eslint . --ext .ts,.tsx,.js --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
