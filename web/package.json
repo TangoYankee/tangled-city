@@ -2,7 +2,7 @@
   "name": "web",
   "version": "0.1.0",
   "description": "front end for tangled city",
-  "main": "index.js",
+  "main": "src/index.tsx",
   "scripts": {
     "build": "webpack --mode=production",
     "watch": "webpack --mode=development --watch",
