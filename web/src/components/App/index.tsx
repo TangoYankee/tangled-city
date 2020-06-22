@@ -3,6 +3,9 @@ import { Landing } from 'components/Landing'
 
 export const App: React.FunctionComponent = () => {
   return (
-    <Landing/>
+    <div>
+      <h1>Tangled City</h1>
+      <Landing />
+    </div>
   )
 }

@@ -1,5 +1,6 @@
 import * as React from 'react'
 
+import 'components/Landing/index.css'
 import { getWelcome } from 'components/Landing/util'
 
 export class Landing extends React.Component<{}, {}> {
@@ -8,21 +9,21 @@ export class Landing extends React.Component<{}, {}> {
     this.alertMessage = this.alertMessage.bind(this)
   }
 
-    alertMessage = () => {
-      getWelcome()
-        .then(response => response.json())
-        .then(data => alert(data.couchdb))
-        .catch(error => {
-          console.warn(error)
-          alert(error.message)
-        })
-    }
+  alertMessage = () => {
+    getWelcome()
+      .then(response => response.json())
+      .then(data => alert(data.couchdb))
+      .catch(error => {
+        console.warn(error)
+        alert(error.message)
+      })
+  }
 
-    render () {
-      return (
-        <button id="welcome-btn" onClick={this.alertMessage}>
-                Welcome!
-        </button>
-      )
-    }
+  render () {
+    return (
+      <button id="welcome-btn" onClick={this.alertMessage}>
+        Welcome!
+      </button>
+    )
+  }
 }
