@@ -1,7 +1,8 @@
 import * as React from 'react'
+import { Landing } from 'components/Landing'
 
 export const App: React.FunctionComponent = () => {
   return (
-    <h1>Hot reload on dev server!</h1>
+    <Landing/>
   )
 }
