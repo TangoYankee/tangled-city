@@ -1,13 +1,24 @@
-web:
-    build: ./web
-    ports:
-        - "9000:9000"
-    volumes:
-        - ./web:/usr/src/app:rw
+version: "3.8"
+services:
+    web:
+        build: ./web
+        container_name: web
+        ports:
+            - "9000:9000"
+        volumes:
+            - ./web:/usr/src/app:rw
 
-proxy:
-    build: ./proxy
-    ports:
-        - "3000:3000"
-    volumes:
-        - ./proxy:/usr/src/app:rw
+    proxy:
+        build: ./proxy
+        container_name: proxy
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./proxy:/usr/src/app:rw
+    db:
+        build: ./db
+        container_name: db
+        ports:
+            - "5984:5984"
+        env_file: 
+            - .env
