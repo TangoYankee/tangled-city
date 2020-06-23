@@ -1,0 +1,6 @@
+web:
+    build: ./web
+    ports:
+        - "9000:9000"
+    volumes:
+        - ./web:/usr/src/app:rw
