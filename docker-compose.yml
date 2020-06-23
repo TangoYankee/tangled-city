@@ -4,3 +4,10 @@ web:
         - "9000:9000"
     volumes:
         - ./web:/usr/src/app:rw
+
+proxy:
+    build: ./proxy
+    ports:
+        - "3000:3000"
+    volumes:
+        - ./proxy:/usr/src/app:rw
