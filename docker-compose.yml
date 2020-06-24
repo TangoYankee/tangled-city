@@ -16,7 +16,7 @@ services:
         volumes:
             - ./proxy:/usr/src/app:rw
     db:
-        build: ./db
+        image: bitnami/couchdb:3.1.0
         container_name: db
         ports:
             - "5984:5984"
