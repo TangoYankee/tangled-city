@@ -20,3 +20,13 @@ services:
         container_name: db
         env_file:
             - .env
+        # match file privleges to non-root user container
+        # sudo chown 1001 <file>  
+        volumes: 
+            - db_data:/bitnami/couchdb
+            # - ./db:/bitnami/couchdb
+            - ./db/10-custom.ini:/opt/bitnami/couchdb/etc/local.d/10-custom.ini
+            
+volumes:
+    db_data:
+        driver: local
