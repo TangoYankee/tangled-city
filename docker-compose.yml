@@ -7,7 +7,6 @@ services:
             - "9000:9000"
         volumes:
             - ./web:/usr/src/app:rw
-
     proxy:
         build: ./proxy
         container_name: proxy
@@ -17,8 +16,7 @@ services:
             - ./proxy:/usr/src/app:rw
     db:
         image: bitnami/couchdb:3.1.0
+        restart: always
         container_name: db
-        ports:
-            - "5984:5984"
-        env_file: 
+        env_file:
             - .env

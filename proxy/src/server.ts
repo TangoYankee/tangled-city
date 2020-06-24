@@ -5,6 +5,7 @@ const requestHandler = (req: http.IncomingMessage, res: http.ServerResponse) => 
   res.setHeader('Access-Control-Allow-Headers', 'authorization, content-type')
   console.debug(req.url)
   let options = {
+    host: 'db',
     method: 'GET',
     port: '5984',
     path: req.url

@@ -1,6 +1,6 @@
 export const getWelcome = () => {
   const options = {
-    method: 'GET'
+    method: 'GET',
   }
-  return fetch('http://localhost:3000', options)
+  return fetch(`http://localhost:3000`, options)
 }
